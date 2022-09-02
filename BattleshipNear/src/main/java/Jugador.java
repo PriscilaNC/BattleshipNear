@@ -1,5 +1,6 @@
 import java.util.Scanner;
 
+//AHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
 public class Jugador {
     private String nombre;
     private Tablero tableroPropio;
@@ -48,4 +49,4 @@ public class Jugador {
         return columna;
     }
 }
-//La ctm odio github
+//ahhhhhhhhhhhhhhhhhhh
