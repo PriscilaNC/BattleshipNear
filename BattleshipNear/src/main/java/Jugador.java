@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 //AHHHHHHHHHHHHHHHHHHHHHHHHHHHHH
+//asdjashduyahsudasuydhasuyd
 public class Jugador {
     private String nombre;
     private Tablero tableroPropio;
