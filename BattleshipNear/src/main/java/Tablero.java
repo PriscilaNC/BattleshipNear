@@ -13,26 +13,25 @@ public class Tablero {
             }
         }
 //Estos 2 for generan el contorno del tablero
-        char[] letras = {'0','a','b','c','d','e','f','g','h','i'};
         for (int i = 0; i < dimension; i++) {
-            tablero[i][0] = " " + letras[i];
+            tablero[i][0] = " " + i;
         }
         for (int j = 0; j < dimension; j++) {
             tablero[0][j] = " " + j;
         }
     }
 
-    public void imprimirTablero(Jugador jugador) {
+    public void imprimirTablero() {
         //Muestra el tablero
         for (int i = 0; i < dimension; i++) {
             for (int j = 0; j < dimension; j++) {
-                System.out.print(tablero[i][j] + "\t");     //tiene que ser print no println
+                System.out.print(this.tablero[i][j] + "\t");     //tiene que ser print no println
             }
             System.out.println("\n");
         }
     }
 
-    public boolean isDisponible(int fila, int columna){
+    public boolean esDisponible(int fila, int columna){
         if (tablero[fila][columna].equals(vacio)){
             System.out.println("Casilla libre");
             return true;
@@ -42,16 +41,18 @@ public class Tablero {
         }
     }
 
-    public void ocuparCasilla(int fila, int columna){
-        if (isDisponible(fila, columna)){
+    public boolean ocuparCasilla(int fila, int columna){
+        if (esDisponible(fila, columna)){
             tablero[fila][columna] = ocupado;
+            return true;
         }else{
             System.out.println("La casilla no estaba disponible");
+            return false;
         }
     }
 
     public void vaciarCasilla(int fila, int columna){
-        if (isDisponible(fila, columna)==false){
+        if (esDisponible(fila, columna)==false){
             tablero[fila][columna] = vacio;
         }else{
             System.out.println("La casilla no estaba ocupada");

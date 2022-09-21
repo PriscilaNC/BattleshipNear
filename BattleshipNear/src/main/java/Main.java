@@ -1,4 +1,5 @@
 public class Main {
+    /*
     static Tablero tablero = new Tablero();
     static Jugador j1 = new Jugador("Jabin");
     static Jugador j2 = new Jugador("Priscila");
@@ -9,4 +10,6 @@ public class Main {
         System.out.println();
         tablero.imprimirTablero(j2);
     }
+
+     */
 }
