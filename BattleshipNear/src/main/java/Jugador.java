@@ -34,6 +34,7 @@ public class Jugador {
 
     public void ubicarFichas(){
         //deben ser 14
+        System.out.println(this.getNombre() + ", ubica tus fichas");
         int fichasRestantes = 3;
 
         while (fichasRestantes != 0) {
@@ -46,8 +47,10 @@ public class Jugador {
             if (tableroPropio.ocuparCasilla(fila, columna)) {
                 fichasRestantes--;
             }
+            System.out.println("Tablero de: " + this.getNombre());
             tableroPropio.imprimirTablero();
         }
+
     }
 
     public int pedirIngresarFila(){
