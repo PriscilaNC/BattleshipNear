@@ -35,7 +35,7 @@ public class Jugador {
     public void ubicarFichas(){
         //deben ser 14
         System.out.println(this.getNombre() + ", ubica tus fichas");
-        int fichasRestantes = 3;
+        int fichasRestantes = 14;
 
         while (fichasRestantes != 0) {
             System.out.println("Ingrese una fila para ubicar su ficha");
@@ -86,10 +86,12 @@ public class Jugador {
             System.out.println("Boom");
             quitarFicha(enemegio);
             System.out.println("Pasar turno al enemigo");
+            System.out.println("");
         }else{
             System.out.println("Ataque fallido");
             setTurno(false);
             System.out.println("Pasar turno al enemigo");
+            System.out.println("");
         }
     }
 
