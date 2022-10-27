@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Jugador {
     private String nombre;
-    private int fichasVivas = 14;
+    private int fichasVivas = 3;
     private Tablero tableroPropio;
     private Tablero tableroEnemigo;
     private Boolean turno;
@@ -35,7 +35,7 @@ public class Jugador {
     public void ubicarFichas(){
         //deben ser 14
         System.out.println(this.getNombre() + ", ubica tus fichas");
-        int fichasRestantes = 14;
+        int fichasRestantes = 3;
 
         while (fichasRestantes != 0) {
             System.out.println("Ingrese una fila para ubicar su ficha");
@@ -76,15 +76,16 @@ public class Jugador {
         }
         return columna;
     }
-
-    public void quitarFicha(Jugador enemigo){
+//todo
+    public void quitarFicha(int fila, int columna, Jugador enemigo){
+        enemigo.tableroPropio.vaciarCasilla(fila, columna);
         enemigo.fichasVivas--;
     }
 
-    public void atacar(int fila, int columna, Jugador enemegio){
+    public void atacar(int fila, int columna, Jugador enemigo){
         if(tableroEnemigo.esDisponible(fila, columna)==false){
             System.out.println("Boom");
-            quitarFicha(enemegio);
+            quitarFicha(fila, columna, enemigo);
             System.out.println("Pasar turno al enemigo");
             System.out.println("");
         }else{

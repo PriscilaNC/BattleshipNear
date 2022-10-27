@@ -16,19 +16,20 @@ public class Juego {
     }
 
     public static void partida(Jugador j1, Jugador j2){
-        while(j1.getFichasVivas() != 0 || j2.getFichasVivas() != 0){
+        while(j1.getFichasVivas() != 0 && j2.getFichasVivas() != 0){
             if (j1.getTurno()){
                 j1.turno(j2);
             }else{
                 j2.turno(j1);
             }
         }
-        if (j1.getFichasVivas()==0){
-            System.out.println(j2.getNombre() + " ha ganado");
-        }else{
+
+        if (j2.getFichasVivas()==0){
             System.out.println(j1.getNombre() + " ha ganado");
         }
-
+        if (j1.getFichasVivas()==0){
+            System.out.println(j2.getNombre() + " ha ganado");
+        }
     }
 }
 
