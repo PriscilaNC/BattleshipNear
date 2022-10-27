@@ -33,10 +33,10 @@ public class Tablero {
 
     public boolean esDisponible(int fila, int columna){
         if (tablero[fila][columna].equals(vacio)){
-            System.out.println("Casilla libre");
+            //System.out.println("Casilla libre");
             return true;
         }else{
-            System.out.println("Casilla ocupada");
+            //System.out.println("Casilla ocupada");
             return false;
         }
     }

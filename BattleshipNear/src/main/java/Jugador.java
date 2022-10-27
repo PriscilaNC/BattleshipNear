@@ -33,7 +33,8 @@ public class Jugador {
     }
 
     public void ubicarFichas(){
-        int fichasRestantes = 14;
+        //deben ser 14
+        int fichasRestantes = 3;
 
         while (fichasRestantes != 0) {
             System.out.println("Ingrese una fila para ubicar su ficha");
@@ -81,15 +82,17 @@ public class Jugador {
         if(tableroEnemigo.esDisponible(fila, columna)==false){
             System.out.println("Boom");
             quitarFicha(enemegio);
-            atacar(fila, columna, enemegio);
+            System.out.println("Pasar turno al enemigo");
         }else{
             System.out.println("Ataque fallido");
             setTurno(false);
+            System.out.println("Pasar turno al enemigo");
         }
     }
 
     public void turno(Jugador enemigo){
         setTurno(true);
+        System.out.println("Es el turno de " + this.getNombre());
         System.out.println("Se necesita fila y columna para atacar");
         atacar(pedirIngresarFila(), pedirIngresarColumna(), enemigo);
         this.setTurno(false);

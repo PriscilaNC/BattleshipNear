@@ -1,0 +1,6 @@
+projectKey=Battleship
+serverUrl=http://localhost:9000
+serverVersion=8.9.10.61524
+dashboardUrl=http://localhost:9000/dashboard?id=Battleship
+ceTaskId=AYP8NutRq_xMHZ8mykVa
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYP8NutRq_xMHZ8mykVa
