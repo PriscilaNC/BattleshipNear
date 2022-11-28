@@ -4,21 +4,27 @@ public class Tablero {
     private String ocupado = "[*]";
     private int dimension = 10;
 
-    public void generarTableroVacio(Jugador jugador) {
-        //Genera un tablero vacio
+    public void generarTableroVacio() {
         tablero = new String[dimension][dimension];
         for (int i = 0; i < dimension; i++) {
             for (int j = 0; j < dimension; j++) {
                 tablero[i][j] = vacio;
             }
+            generarContornoTablero();
         }
-//Estos 2 for generan el contorno del tablero
+    }
+
+    public void generarContornoTablero() {
         for (int i = 0; i < dimension; i++) {
             tablero[i][0] = " " + i;
         }
         for (int j = 0; j < dimension; j++) {
             tablero[0][j] = " " + j;
         }
+    }
+
+    public String[][] getTablero() {
+        return tablero;
     }
 
     public void imprimirTablero() {

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//todo: eliminar atributo "tableroEnemigo" y remplazarlo con enemigo.getTableroPropio()
 public class Jugador {
     private String nombre;
     private int fichasVivas = 3;
@@ -30,6 +30,22 @@ public class Jugador {
 
     public int getFichasVivas() {
         return fichasVivas;
+    }
+
+    public String[][] getTableroPropio() {
+        return tableroPropio.getTablero();
+    }
+
+    public void setTableroPropio(Tablero tableroPropio) {
+        this.tableroPropio = tableroPropio;
+    }
+
+    public String[][] getTableroEnemigo() {
+        return tableroEnemigo.getTablero();
+    }
+
+    public void setTableroEnemigo(Tablero tableroEnemigo) {
+        this.tableroEnemigo = tableroEnemigo;
     }
 
     public void ubicarFichas(){

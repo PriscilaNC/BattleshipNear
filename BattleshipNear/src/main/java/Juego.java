@@ -6,8 +6,8 @@ public class Juego {
         Jugador j1 = new Jugador("Jabin",tablero1,tablero2,true);
         Jugador j2 = new Jugador("Priscila",tablero2,tablero1,false);
 
-        tablero1.generarTableroVacio(j1);
-        tablero2.generarTableroVacio(j2);
+        tablero1.generarTableroVacio();
+        tablero2.generarTableroVacio();
 
         j1.ubicarFichas();
         j2.ubicarFichas();
